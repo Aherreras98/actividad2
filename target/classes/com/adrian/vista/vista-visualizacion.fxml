@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="vistaVisualizacionRoot" alignment="CENTER" prefHeight="350" prefWidth="600" spacing="30" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.adrian.vista.VistaVisualizacion">
+   <padding>
+      <Insets bottom="20" left="20" right="20" top="20" />
+   </padding>
+
+   <VBox prefHeight="306.0" prefWidth="247.0" spacing="15">
+      <Text style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Datos del Dragón" textAlignment="CENTER" wrappingWidth="227.9638671875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+
+      <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
+         <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+         <Label fx:id="labelNombre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+         <Label text="Raza:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <Label fx:id="labelRaza" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+         <Label text="Tamaño:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+         <Label fx:id="labelTamaño" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+         <Label text="Color:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         <Label fx:id="labelColor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </VBox>
+
+   <VBox prefHeight="310.0" prefWidth="321.0" spacing="15">
+      <Text style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Editar Campos" textAlignment="CENTER" wrappingWidth="307.150390625">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Text>
+
+      <GridPane alignment="TOP_CENTER" hgap="10" vgap="10">
+         <Label contentDisplay="RIGHT" text="Nombre:" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+         <TextField fx:id="campoNombre" onAction="#actualizarNombre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+         <Label prefHeight="17.0" prefWidth="31.0" text="Raza:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <TextField fx:id="campoRaza" onAction="#actualizarRaza" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+         <Label text="Tamaño:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+         <TextField fx:id="campoTamaño" onAction="#actualizarTamaño" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+         <Label text="Color:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         <TextField fx:id="campoColor" onAction="#actualizarColor" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+   </VBox>
+</HBox>
